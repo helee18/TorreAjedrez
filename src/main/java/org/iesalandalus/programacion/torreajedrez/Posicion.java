@@ -37,5 +37,5 @@ public class Posicion {
 		setFila(fila);
 		setColumna(columna);
 	}
-	
+	  
 }
