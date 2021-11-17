@@ -66,4 +66,12 @@ public class Posicion {
 		return columna == other.columna && fila == other.fila;
 	}
 	
+	// toSring
+
+	@Override
+	public String toString() {
+		return "(fila=" + fila + ", columna=" + columna + ")";
+	}
+	
+	
 }
