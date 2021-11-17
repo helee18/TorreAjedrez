@@ -31,6 +31,11 @@ public class Posicion {
 		this.columna = columna;
 	}
 	
+	// Constructor
 	
+	public Posicion (int fila, char columna) {
+		setFila(fila);
+		setColumna(columna);
+	}
 	
 }
