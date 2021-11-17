@@ -43,6 +43,10 @@ public class Posicion {
 	// Constructor copia
 	
 	public Posicion(Posicion posicionOrigen) {
+		
+		if (posicionOrigen==null)
+			throw new NullPointerException("ERROR: No es posible copiar una posición nula.");
+		
 		setFila(posicionOrigen.getFila());
 		setColumna(posicionOrigen.getColumna());
 	}
