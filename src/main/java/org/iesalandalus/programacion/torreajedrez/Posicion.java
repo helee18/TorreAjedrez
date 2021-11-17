@@ -37,5 +37,12 @@ public class Posicion {
 		setFila(fila);
 		setColumna(columna);
 	}
-	  
+	
+	// Constructor copia
+	
+	public Posicion(Posicion posicionOrigen) {
+		setFila(posicionOrigen.getFila());
+		setColumna(posicionOrigen.getColumna());
+	}
+	
 }
