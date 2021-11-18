@@ -27,7 +27,7 @@ public class Posicion {
 	}
 	
 	public void setColumna(char columna) {
-		if (columna != 'a' || columna != 'b' || columna != 'c' || columna != 'd' || columna != 'e' || columna != 'f' || columna != 'g' || columna != 'h')
+		if (columna != 'a' && columna != 'b' && columna != 'c' && columna != 'd' && columna != 'e' && columna != 'f' && columna != 'g' && columna != 'h')
 			throw new IllegalArgumentException("ERROR: Columna no válida.");
 		
 		this.columna = columna;
