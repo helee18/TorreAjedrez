@@ -27,7 +27,7 @@ public class Torre {
 	}
 	
 	public Posicion getPosicion() {
-		return posicion;
+		return posicion = new Posicion(posicion);
 	}
 	
 	public void setPosicion(Posicion posicion) {
