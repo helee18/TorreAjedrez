@@ -5,6 +5,12 @@ public class Torre {
 	private Color color;
 	private Posicion posicion;
 	
+	// Constructor por defecto
+	public Torre() {
+		setColor(color.NEGRO);
+		setPosicion(new Posicion(8, 'h'));
+	}
+	
 	// Getter y setters
 	public Color getColor() {
 		return color;
@@ -12,7 +18,7 @@ public class Torre {
 	
 	public void setColor(Color color) {
 		if (color==null)
-			throw new NullPointerException("ERROR: No puede haber un color nulo???????");
+			throw new NullPointerException("ERROR: No se puede asignar un color nulo.");
 		
 		if (color!=Color.BLANCO && color!=Color.NEGRO)
 			throw new IllegalArgumentException("ERROR: Color no valido");
