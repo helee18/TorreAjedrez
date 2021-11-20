@@ -19,7 +19,7 @@ public class Torre {
 		}
 		else if (color == Color.BLANCO) {
 			setColor(Color.BLANCO);
-			setPosicion(new Posicion(1, 'h'));
+			setPosicion(new Posicion(8, 'h'));
 		}
 	}
 	
