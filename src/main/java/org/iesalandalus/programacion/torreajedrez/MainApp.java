@@ -9,7 +9,12 @@ public class MainApp {
 	private static Torre torre;
 	
 	public static void main(String[] args) {
-		System.out.println("kk");
+		int opcion;
+		do {
+			opcion = elegirOpcion();
+			ejecutarOpcion(opcion);
+			mostrarTorre();
+		}while (opcion != 5);
 	}
 	
 	public static void mostrarTorre(){
@@ -42,7 +47,7 @@ public class MainApp {
 			mostrarMenu();
 			System.out.println("Elige una opción");
 			opcion = Entrada.entero();
-		} while ((opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4) || opcion == 5);
+		} while (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4);
 		
 		// Devolvemos la opción elegida
 		return opcion;
@@ -165,23 +170,26 @@ public class MainApp {
 		
 		// Para elegir la direccion, llamamos al metodo que hemos creado anteriormente
 		direccion = elegirDireccion();
-		
-		// Segun la opción, movemos los pasos que nos pidamos que introduzcan o realizamos enroque solicitado
-		if (direccion.equals(Direccion.ARRIBA) || direccion.equals(Direccion.ABAJO) || direccion.equals(Direccion.IZQUIERDA) || direccion.equals(Direccion.DERECHA)) {
-			System.out.println("Introduce los pasos a dar");
-			pasos = Entrada.entero();
-			try {
-				torre.mover(direccion, pasos);
-			}catch (OperationNotSupportedException | NullPointerException | IllegalArgumentException e){
-				System.out.println(e.getMessage());
+		if (torre == null)
+			System.out.println("ERROR: No existe torre.");
+		else {
+			// Segun la opción, movemos los pasos que nos pidamos que introduzcan o realizamos enroque solicitado
+			if (direccion.equals(Direccion.ARRIBA) || direccion.equals(Direccion.ABAJO) || direccion.equals(Direccion.IZQUIERDA) || direccion.equals(Direccion.DERECHA)) {
+				System.out.println("Introduce los pasos a dar");
+				pasos = Entrada.entero();
+				try {
+					torre.mover(direccion, pasos);
+				}catch (OperationNotSupportedException | NullPointerException | IllegalArgumentException e){
+					System.out.println(e.getMessage());
+				}
+			}else {
+				try {
+					torre.enrocar(direccion);
+				}catch (OperationNotSupportedException | NullPointerException e) {
+					System.out.println(e.getMessage());
+				}
 			}
-		}else {
-			try {
-				torre.enrocar(direccion);
-			}catch (OperationNotSupportedException | NullPointerException e) {
-				System.out.println(e.getMessage());
-			}
-		}	
+		}
 	}
 	
 	public static void ejecutarOpcion(int opcion) {
