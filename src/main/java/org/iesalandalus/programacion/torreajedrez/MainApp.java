@@ -84,4 +84,16 @@ public class MainApp {
 		// Devolvemos la columna elegida
 		return columnaElegida;
 	}
+	
+	public static void mostrarMenuDirecciones() {
+		// Mostramos menú
+		System.out.println("MENÚ DE DIRECCIONES");
+		System.out.println("---------------------------");
+		System.out.println("1.- ARRIBA");
+		System.out.println("2.- ABAJO");
+		System.out.println("3.- IZQUIERDA");
+		System.out.println("4.- DERECHA");
+		System.out.println("5.- ENROQUE CORTO");
+		System.out.println("6.- ENROQUE LARGO");
+	}
 }
