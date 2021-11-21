@@ -178,9 +178,12 @@ public class MainApp {
 		}else {
 			try {
 				torre.enrocar(direccion);
-			}catch (OperationNotSupportedException | NullPointerExceptionn e) {
+			}catch (OperationNotSupportedException | NullPointerException e) {
 				System.out.println(e.getMessage());
 			}
 		}	
 	}
+	
+	
+
 }
