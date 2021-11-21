@@ -10,19 +10,22 @@ public class MainApp {
 	
 	public static void main(String[] args) {
 		int opcion;
+		
 		do {
 			opcion = elegirOpcion();
 			ejecutarOpcion(opcion);
 			
 			if (opcion != 5)
 				mostrarTorre();
+			
+			System.out.println("--");
 		}while (opcion != 5);
 	}
 	
 	public static void mostrarTorre(){
 		// Mostramos torre o decimos que es nula, si asi es
 		try {
-			torre.toString();
+			System.out.println(torre.toString());
 		}catch (NullPointerException e) {
 			System.out.println("ERROR: La torre no existe.");
 		}
