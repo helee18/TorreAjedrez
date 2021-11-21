@@ -17,9 +17,11 @@ public class Torre {
 	
 	// Constructor torre con valor de entrada color
 	public Torre(Color color) {
+		// Excepcion si el color es nuelo
 		if (color == null)
 			throw new NullPointerException("ERROR: No se puede asignar un color nulo.");
 		
+		// Dependiendo del color la posicion es una u otra
 		if (color == Color.BLANCO) {
 			setColor(Color.BLANCO);
 			setPosicion(new Posicion(1, 'h'));
@@ -32,9 +34,11 @@ public class Torre {
 	
 	// Constructor torre con valores de entrada color y columna
 	public Torre(Color color, char columnaIni) {
+		// Escepcion si el color es null
 		if (color == null)
 			throw new NullPointerException("ERROR: No se puede asignar un color nulo.");
 		
+		// Dependiendo del color la posicion es una u otra
 		if (color == Color.BLANCO) {
 			setColor(Color.BLANCO);
 			setPosicion(new Posicion(1, columnaIni));
@@ -47,12 +51,15 @@ public class Torre {
 	
 	// Metodo mover
 	public void mover(Direccion direccion, int pasos) throws OperationNotSupportedException {
+		// Excepción si el numero de pasos es 0 o negativo
 		if (pasos<1) 
 			throw new IllegalArgumentException("ERROR: El número de pasos debe ser positivo.");
 		
+		// Excepcion si la direccion es nula
 		if (direccion==null)
 			throw new NullPointerException("ERROR: La dirección no puede ser nula.");
 		
+		// Dependiendo de la dirección y el color se da un valor distinto a la posicion
 		switch (direccion) {
 			case ARRIBA:
 				
@@ -110,9 +117,11 @@ public class Torre {
 	
 	// Metodo enroque
 	public void enrocar(Direccion direccion) throws OperationNotSupportedException {
+		// Excepcion si la direccion es nula
 		if (direccion==null)
 			throw new NullPointerException("ERROR: La dirección no puede ser nula.");
 		
+		// Segun el ripo de enroque y el color se intenta hacer una cosa u otra y se lanza excepción si no se puede
 		switch (direccion) {
 			case ENROQUE_CORTO:
 				if (getColor()==Color.BLANCO) {

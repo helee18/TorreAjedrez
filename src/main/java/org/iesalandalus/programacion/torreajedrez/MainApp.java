@@ -9,8 +9,10 @@ public class MainApp {
 	private static Torre torre;
 	
 	public static void main(String[] args) {
+		// Declaramos variable local
 		int opcion;
 		
+		// Repetimos el menu y mostramos la torre mientras no se elija salir
 		do {
 			opcion = elegirOpcion();
 			ejecutarOpcion(opcion);
