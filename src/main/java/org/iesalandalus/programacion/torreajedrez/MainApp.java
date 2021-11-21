@@ -52,7 +52,7 @@ public class MainApp {
 		char colorElegido;
 		Color color;
 		
-		// Dsmos valor null al objeto
+		// Damos valor null al objeto
 		color = null;
 		
 		// Mostramos opciones y pedimos que se elija una
@@ -95,5 +95,47 @@ public class MainApp {
 		System.out.println("4.- DERECHA");
 		System.out.println("5.- ENROQUE CORTO");
 		System.out.println("6.- ENROQUE LARGO");
+	}
+	
+	public static Direccion elegirDireccion() {
+		// Definimos variables locales
+		int direccionElegida;
+		Direccion direccion;
+		
+		// Damos valor null al objeto
+		direccion = null;
+		
+		// Mostramos menu y pedimos la eleccion de una opcion hasta que sea valida
+		do {
+			mostrarMenuDirecciones();
+			System.out.println("Elige una opción");
+			direccionElegida = Entrada.entero();
+		} while (direccionElegida != 1 && direccionElegida != 2 && direccionElegida != 3 && direccionElegida != 4 && direccionElegida != 5 && direccionElegida != 6);
+		
+		switch (direccionElegida) {
+			case 1:
+				direccion = Direccion.ARRIBA;
+				break;
+			case 2:
+				direccion = Direccion.ABAJO;
+				break;
+			case 3:
+				direccion = Direccion.IZQUIERDA;
+				break;
+			case 4:
+				direccion = Direccion.DERECHA;
+				break;
+			case 5:
+				direccion = Direccion.ENROQUE_CORTO;
+				break;
+			case 6:
+				direccion = Direccion.ENROQUE_LARGO;
+				break;
+			default:
+				break;
+		}
+		
+		// Devolvemos el objeto
+		return direccion;
 	}
 }
