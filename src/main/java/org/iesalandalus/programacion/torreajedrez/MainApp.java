@@ -18,11 +18,11 @@ public class MainApp {
 	
 	public static void mostrarMenu() {
 		System.out.println("MENÚ DE OPCIONES");
-		System.out.println("------------------");
-		System.out.println("1.- Crear torre");
-		System.out.println("2.- Mostrar torre");
-		System.out.println("3.- Mover torre");
-		System.out.println("4.- Salir");
-		
+		System.out.println("---------------------------");
+		System.out.println("1.- Crear torre por defecto");
+		System.out.println("2.- Crear torre de un color");
+		System.out.println("3.- Crear torre de un color en una columna inicial dada ('c' o 'f')");
+		System.out.println("4.- Mover torre");
+		System.out.println("5.- Salir");
 	}
 }
