@@ -27,10 +27,27 @@ public class Posicion {
 	}
 	
 	public void setColumna(char columna) {
-		if (columna != 'a' && columna != 'b' && columna != 'c' && columna != 'd' && columna != 'e' && columna != 'f' && columna != 'g' && columna != 'h')
+		if (columna != 'a' && columna != 'b' && columna != 'c' && columna != 'd' && columna != 'e' && columna != 'f' && columna != 'g' && columna != 'h' && columna!='A' && columna!='B' && columna!='C' && columna!='D' && columna!='E' && columna!='F' && columna!='G' && columna!='H')
 			throw new IllegalArgumentException("ERROR: Columna no válida.");
 		
-		this.columna = columna;
+		if (columna=='A')
+			this.columna = 'a';
+		else if (columna=='B')
+			this.columna = 'b';
+		else if (columna=='C')
+			this.columna = 'c';
+		else if (columna=='D')
+			this.columna = 'd';
+		else if (columna=='E')
+			this.columna = 'e';
+		else if (columna=='F')
+			this.columna = 'f';
+		else if (columna=='G')
+			this.columna = 'g';
+		else if (columna=='H')
+			this.columna = 'h';
+		else
+			this.columna = columna;
 	}
 	
 	// Constructor
