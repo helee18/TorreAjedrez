@@ -16,7 +16,6 @@ public class MainApp {
 			
 			if (opcion != 5)
 				mostrarTorre();
-			
 		}while (opcion != 5);
 	}
 	
