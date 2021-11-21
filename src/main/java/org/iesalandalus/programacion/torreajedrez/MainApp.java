@@ -138,4 +138,8 @@ public class MainApp {
 		// Devolvemos el objeto
 		return direccion;
 	}
+	
+	public static void crearTorreDefecto() {
+		torre = new Torre();
+	}
 }
