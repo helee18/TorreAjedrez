@@ -71,4 +71,17 @@ public class MainApp {
 		return color;
 	}
 	
+	public static char elegirColumnaInicial() {
+		
+		//Definimos variables locales
+		char columnaElegida;
+		
+		do {
+			System.out.println("Elige una columna inicial (c o f)");
+			columnaElegida = Entrada.caracter();
+		} while (columnaElegida != 'c' && columnaElegida != 'C' && columnaElegida != 'f' && columnaElegida != 'F');
+		
+		// Devolvemos la columna elegida
+		return columnaElegida;
+	}
 }
