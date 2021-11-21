@@ -13,13 +13,25 @@ public class Torre {
 	
 	// Constructor torre con valor de entrada color
 	public Torre(Color color) {
-		if (color == Color.NEGRO) {
-			setColor(Color.NEGRO);
+		if (color == Color.BLANCO) {
+			setColor(Color.BLANCO);
 			setPosicion(new Posicion(1, 'h'));
 		}
-		else if (color == Color.BLANCO) {
-			setColor(Color.BLANCO);
+		else if (color == Color.NEGRO) {
+			setColor(Color.NEGRO);
 			setPosicion(new Posicion(8, 'h'));
+		}
+	}
+	
+	// Constructor torre con valores de entrada color y columna
+	public Torre(Color color, char columnaIni) {
+		if (color == Color.BLANCO) {
+			setColor(Color.BLANCO);
+			setPosicion(new Posicion(1, columnaIni));
+		}
+		else if (color == Color.NEGRO) {
+			setColor(Color.NEGRO);
+			setPosicion(new Posicion(8, columnaIni));
 		}
 	}
 	
