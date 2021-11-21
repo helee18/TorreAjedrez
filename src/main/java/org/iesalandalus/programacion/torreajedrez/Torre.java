@@ -187,8 +187,12 @@ public class Torre {
 		Torre other = (Torre) obj;
 		return color == other.color && Objects.equals(posicion, other.posicion);
 	}
+
+	@Override
+	// decuelva fila=8, columna=h, color=NEGRO
+	public String toString() {
+		return "fila="+posicion.getFila()+", columna="+posicion.getColumna()+", color="+color;
+	}
 	
-	
-	
-	
+		
 }
