@@ -145,8 +145,14 @@ public class MainApp {
 	}
 	
 	public static void crearTorreColor() {
-		// llamamos al constructor torre color
+		// llamamos al constructor torre color de torre
 		// pasamos el parametro color haciendo uso del metodo creado anteriormente en esta clase
 		torre = new Torre(elegirColor());
+	}
+	
+	public static void crearTorreColorColumna(){
+		// llamamos al constructor torre color columna de torre
+		// pasamos el parametro color haciendo uso del metodo creado anteriormente en esta clase, al igual que la columna inicial
+		torre = new Torre(elegirColor(),elegirColumnaInicial());
 	}
 }
