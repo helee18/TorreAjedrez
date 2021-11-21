@@ -42,7 +42,7 @@ public class MainApp {
 			mostrarMenu();
 			System.out.println("Elige una opción");
 			opcion = Entrada.entero();
-		} while (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4 && opcion != 5);
+		} while ((opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4) || opcion == 5);
 		
 		// Devolvemos la opción elegida
 		return opcion;
@@ -184,6 +184,6 @@ public class MainApp {
 		}	
 	}
 	
-	
+
 
 }
