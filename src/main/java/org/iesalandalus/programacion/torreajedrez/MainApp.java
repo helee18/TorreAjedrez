@@ -6,7 +6,6 @@ public class MainApp {
 	
 	public static void main(String[] args) {
 		System.out.println("kk");
-		mostrarTorre();
 	}
 	
 	public static void mostrarTorre(){
@@ -16,5 +15,14 @@ public class MainApp {
 			System.out.println("ERROR: La torre no existe.");
 		}
 	}
-
+	
+	public static void mostrarMenu() {
+		System.out.println("MENÚ DE OPCIONES");
+		System.out.println("------------------");
+		System.out.println("1.- Crear torre");
+		System.out.println("2.- Mostrar torre");
+		System.out.println("3.- Mover torre");
+		System.out.println("4.- Salir");
+		
+	}
 }
