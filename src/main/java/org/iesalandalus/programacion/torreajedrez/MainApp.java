@@ -140,6 +140,13 @@ public class MainApp {
 	}
 	
 	public static void crearTorreDefecto() {
+		// Llamamos al constructor por defecto de torre
 		torre = new Torre();
+	}
+	
+	public static void crearTorreColor() {
+		// llamamos al constructor torre color
+		// pasamos el parametro color haciendo uso del metodo creado anteriormente en esta clase
+		torre = new Torre(elegirColor());
 	}
 }
