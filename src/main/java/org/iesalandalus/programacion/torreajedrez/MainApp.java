@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.torreajedrez;
 
+import javax.naming.OperationNotSupportedException;
+
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class MainApp {
@@ -154,5 +156,31 @@ public class MainApp {
 		// llamamos al constructor torre color columna de torre
 		// pasamos el parametro color haciendo uso del metodo creado anteriormente en esta clase, al igual que la columna inicial
 		torre = new Torre(elegirColor(),elegirColumnaInicial());
+	}
+	
+	public static void mover() {
+		// Definimos varibles locales
+		Direccion direccion;
+		int pasos;
+		
+		// Para elegir la direccion, llamamos al metodo que hemos creado anteriormente
+		direccion = elegirDireccion();
+		
+		// Segun la opción, movemos los pasos que nos pidamos que introduzcan o realizamos enroque solicitado
+		if (direccion.equals(Direccion.ARRIBA) || direccion.equals(Direccion.ABAJO) || direccion.equals(Direccion.IZQUIERDA) || direccion.equals(Direccion.DERECHA)) {
+			System.out.println("Introduce los pasos a dar");
+			pasos = Entrada.entero();
+			try {
+				torre.mover(direccion, pasos);
+			}catch (OperationNotSupportedException | NullPointerException | IllegalArgumentException e){
+				System.out.println(e.getMessage());
+			}
+		}else {
+			try {
+				torre.enrocar(direccion);
+			}catch (OperationNotSupportedException | NullPointerExceptionn e) {
+				System.out.println(e.getMessage());
+			}
+		}	
 	}
 }
