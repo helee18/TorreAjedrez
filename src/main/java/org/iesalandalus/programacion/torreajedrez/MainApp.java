@@ -6,6 +6,8 @@ public class MainApp {
 
 	private static Torre torre;
 	private static int opcion;
+	private static char colorElegido;
+	private static Color color;
 	
 	public static void main(String[] args) {
 		System.out.println("kk");
@@ -38,5 +40,19 @@ public class MainApp {
 		} while (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4 && opcion != 5);
 		
 		return opcion;
+	}
+	
+	public static Color elegirColor() {
+		do {
+			System.out.println("Elige un color: blanco (b) o negro (n)");
+			colorElegido = Entrada.caracter();
+		} while (colorElegido != 'b' && colorElegido != 'B' && colorElegido != 'n' && colorElegido != 'N');
+		
+		if (colorElegido == 'b' || colorElegido == 'B')
+			color = Color.BLANCO;
+		else
+			color = Color.NEGRO;
+		
+		return color;
 	}
 }
