@@ -188,19 +188,15 @@ public class MainApp {
 		switch (opcion) {
 			case 1:
 				crearTorreDefecto();
-				mostrarTorre();
 				break;
 			case 2: 
 				crearTorreColor();
-				mostrarTorre();
 				break;
 			case 3:
 				crearTorreColorColumna();
-				mostrarTorre();
 				break;
 			case 4:
 				mover();
-				mostrarTorre();
 				break;
 			default:
 				break;
