@@ -5,9 +5,6 @@ import org.iesalandalus.programacion.utilidades.Entrada;
 public class MainApp {
 
 	private static Torre torre;
-	private static int opcion;
-	private static char colorElegido;
-	private static Color color;
 	
 	public static void main(String[] args) {
 		System.out.println("kk");
@@ -32,6 +29,8 @@ public class MainApp {
 	}
 	
 	public static int elegirOpcion() {
+
+		int opcion;
 		
 		do {
 			mostrarMenu();
@@ -43,6 +42,12 @@ public class MainApp {
 	}
 	
 	public static Color elegirColor() {
+
+		char colorElegido;
+		Color color;
+		
+		color = null;
+		
 		do {
 			System.out.println("Elige un color: blanco (b) o negro (n)");
 			colorElegido = Entrada.caracter();
