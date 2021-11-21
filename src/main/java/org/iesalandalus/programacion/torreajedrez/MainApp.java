@@ -13,7 +13,10 @@ public class MainApp {
 		do {
 			opcion = elegirOpcion();
 			ejecutarOpcion(opcion);
-			mostrarTorre();
+			
+			if (opcion != 5)
+				mostrarTorre();
+			
 		}while (opcion != 5);
 	}
 	
@@ -47,7 +50,7 @@ public class MainApp {
 			mostrarMenu();
 			System.out.println("Elige una opción");
 			opcion = Entrada.entero();
-		} while (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4);
+		} while (opcion != 1 && opcion != 2 && opcion != 3 && opcion != 4 && opcion != 5);
 		
 		// Devolvemos la opción elegida
 		return opcion;
@@ -205,6 +208,9 @@ public class MainApp {
 				break;
 			case 4:
 				mover();
+				break;
+			case 5:
+				System.out.println("Adiós");
 				break;
 			default:
 				break;
