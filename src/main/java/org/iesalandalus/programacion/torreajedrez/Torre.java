@@ -13,6 +13,9 @@ public class Torre {
 	
 	// Constructor torre con valor de entrada color
 	public Torre(Color color) {
+		if (color == null)
+			throw new NullPointerException("ERROR: No se puede asignar un color nulo.");
+		
 		if (color == Color.BLANCO) {
 			setColor(Color.BLANCO);
 			setPosicion(new Posicion(1, 'h'));
@@ -25,6 +28,9 @@ public class Torre {
 	
 	// Constructor torre con valores de entrada color y columna
 	public Torre(Color color, char columnaIni) {
+		if (color == null)
+			throw new NullPointerException("ERROR: No se puede asignar un color nulo.");
+		
 		if (color == Color.BLANCO) {
 			setColor(Color.BLANCO);
 			setPosicion(new Posicion(1, columnaIni));
