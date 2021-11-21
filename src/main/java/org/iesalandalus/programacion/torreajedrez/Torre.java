@@ -35,6 +35,18 @@ public class Torre {
 		}
 	}
 	
+	// Metodo mover
+	public static void mover(Direccion direccion, int pasos) {
+		if (direccion==null)
+			throw new NullPointerException("ERROR: No se puede asignar una direccion nula.");
+		
+		if (pasos<0) 
+			throw new IllegalArgumentException("ERROR: No se puede mover un numero negativo.");
+		
+		//Si no puede realizar dicho movimiento, debido a que la torre se sale del tablero, se debe lanzar una excepción del tipo 
+		//OperationNotSupportedException con un mensaje adecuado y no modificará la posición de la torre. Realiza un commit.
+	}
+	
 	// Getter y setters
 	public Color getColor() {
 		return color;
